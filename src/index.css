@@ -1,0 +1,400 @@
+/* Web application styles - desktop-first */
+:root {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #213547;
+  background-color: #f5f7fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: #0d6efd;
+  text-decoration: none;
+}
+a:hover {
+  color: #0a58ca;
+}
+
+/* Auth pages - Pictures left, form right, blue theme */
+.auth-page {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: stretch;
+}
+
+.auth-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: calc(100vh - 56px);
+}
+
+/* Left: Illustration/pictures | Right: Form - use order for layout */
+.auth-form-col {
+  flex: 1;
+  min-width: 320px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.auth-form-inner {
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+}
+
+.auth-brand-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.15rem;
+}
+
+.auth-brand-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.auth-form-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.auth-form-desc {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.auth-input {
+  border-radius: 8px;
+  border-color: #e2e8f0;
+}
+
+.auth-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.auth-eye-btn {
+  border-radius: 0 8px 8px 0;
+  border-color: #e2e8f0;
+}
+
+.auth-btn-primary {
+  background: #2563eb;
+  border-color: #2563eb;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.auth-btn-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #fff;
+}
+
+.auth-link {
+  color: #2563eb;
+}
+
+.auth-link:hover {
+  color: #1d4ed8;
+}
+
+.auth-link-small {
+  font-size: 0.875rem;
+  color: #2563eb;
+}
+
+.auth-link-small:hover {
+  color: #1d4ed8;
+}
+
+.auth-footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.auth-footer-text {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Left: Illustration column - blue theme, pictures */
+.auth-illustration-col {
+  flex: 1;
+  min-width: 400px;
+  background: linear-gradient(160deg, #dbeafe 0%, #eff6ff 50%, #e0e7ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+}
+
+.auth-illustration-img-wrap {
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.15);
+  max-width: 400px;
+}
+
+.auth-illustration-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.auth-illustration-content {
+  text-align: center;
+  position: relative;
+}
+
+.auth-illustration-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.15rem;
+}
+
+.auth-illustration-subtitle {
+  font-size: 0.9rem;
+  color: #2563eb;
+  margin-bottom: 2.5rem;
+}
+
+/* Circular healthcare icons */
+.auth-icons-circle {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+}
+
+.auth-icons-dotted-ring {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 2px dashed rgba(37, 99, 235, 0.4);
+  border-radius: 50%;
+}
+
+.auth-icon-item {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 50%;
+  top: 50%;
+  margin-left: -22px;
+  margin-top: -22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --angle: calc(var(--i) * (360deg / var(--total)));
+  transform: rotate(var(--angle)) translateY(-130px) rotate(calc(-1 * var(--angle)));
+}
+
+.auth-icon-emoji {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.auth-illustration-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top, rgba(219, 234, 254, 0.5), transparent);
+  pointer-events: none;
+}
+
+/* Shared page header styling */
+.page-header {
+  margin-bottom: 1.5rem;
+}
+.page-header-title {
+  margin-bottom: 0.1rem;
+  font-weight: 600;
+}
+.page-header-subtitle {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+/* Subtle hover effect for cards */
+.card-hover {
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 0.75rem 1.5rem rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Landing page */
+.landing-hero {
+  background: linear-gradient(135deg, #e8f4fc 0%, #f0f7ff 50%, #f5f7fa 100%);
+}
+
+/* Landing navbar logo */
+.landing-logo-icon {
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* New hero - blue background with doctor image */
+.landing-hero-new {
+  background: linear-gradient(135deg, #1e5a9e 0%, #2563eb 50%, #1d4ed8 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-hero-bg-shapes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 90% 20%, rgba(255,255,255,0.06) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.landing-hero-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.landing-hero-subtitle {
+  font-size: 1rem;
+  opacity: 0.95;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.95);
+}
+
+.landing-hero-doctor-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.landing-hero-doctor-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Search bar overlapping hero */
+.landing-search-bar {
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 1rem;
+}
+
+.landing-search-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+/* How It Works */
+.landing-section-title {
+  text-align: center;
+  color: #1e293b;
+  font-size: 1.75rem;
+}
+
+.landing-step-number {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.landing-stats {
+  font-size: 0.875rem;
+}
+
+.landing-stat-pill {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(13, 110, 253, 0.06);
+  border: 1px solid rgba(13, 110, 253, 0.12);
+}
+
+.landing-stat-number {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.landing-stat-label {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.landing-doctor-avatar {
+  width: 80px;
+  height: 80px;
+}
+.landing-doctor-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.landing-cta {
+  background: linear-gradient(135deg, #1e5a9e 0%, #1d4ed8 100%);
+  color: #fff;
+}
+.landing-cta .btn-outline-light:hover {
+  color: #1d4ed8;
+  background: #fff;
+}
