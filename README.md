@@ -1,1 +1,1 @@
-# smart-health-care
+# smart-healthcare-appointment-prescription
